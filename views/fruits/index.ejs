@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/header.ejs') %>
+    <main>
+        <div>
+            <p><%= user%></p>
+            <a href="/user/logout"><button>Logout</button></a>
+            <h3><a href="/fruit/new">Create new fruit</a></h3>
+            <% for (fruit of fruits) { %>
+                <article>
+                    <a href="/fruit/<%=fruit.id %>"><h1>
+                        <%= fruit.name %>
+                    </a></h1>
+                </article>
+            <% } %>
+        </div>
+    </main>
+</body>
+</html>
